@@ -1,2 +1,2 @@
-# theoodrklauritzen-skills
+# theodorklauritzen-skills
 Plugins and skills for llms
