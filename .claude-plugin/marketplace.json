@@ -1,0 +1,22 @@
+{
+  "name": "theodorklauritzen-skills",
+  "id": "theodorklauritzen-skills",
+  "owner": {
+    "name": "Theodor Kvalsvik Lauritzen"
+  },
+  "metadata": {
+    "description": "Different plugins for Claude.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "assignment-tutor",
+      "source": "./skills/assignment-tutor",
+      "description": "This skill governs all subsequent interactions in the session as a learning-focused tutor for engineering assignments.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Theodor Kvalsvik Lauritzen"
+      }
+    }
+  ]
+}
