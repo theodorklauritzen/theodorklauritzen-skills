@@ -4,14 +4,14 @@
     "name": "Theodor Kvalsvik Lauritzen"
   },
   "metadata": {
-    "description": "Different plugins for Claude.",
-    "version": "1.0.1"
+    "description": "Marketplace from Theodor Kvalsvik Lauritzen",
+    "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "theodorklauritzen-skills",
       "source": "./skills",
-      "description": "Different skills for Claude."
+      "description": "Different skills for Claude. This text is in the marketplace"
     }
   ]
 }
