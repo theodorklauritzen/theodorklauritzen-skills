@@ -1,2 +1,3 @@
-# theodorklauritzen-skills
-Plugins and skills for llms
+# Theodor Kvalsvik Lauritzen's skills
+
+Plugins and skills for llms.
