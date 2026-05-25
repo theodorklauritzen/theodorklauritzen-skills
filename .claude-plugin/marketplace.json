@@ -3,10 +3,6 @@
   "owner": {
     "name": "Theodor Kvalsvik Lauritzen"
   },
-  "metadata": {
-    "description": "Marketplace from Theodor Kvalsvik Lauritzen",
-    "version": "1.0.0"
-  },
   "plugins": [
     {
       "name": "theodorklauritzen-skills",

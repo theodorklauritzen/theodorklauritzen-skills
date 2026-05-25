@@ -1,7 +1,6 @@
 {
   "name": "theodorklauritzen-skills",
   "description": "Different skills for Claude. This is in the plugin",
-  "version": "1.0.0",
   "author": {
     "name": "Theodor Kvalsvik Lauritzen"
   },
