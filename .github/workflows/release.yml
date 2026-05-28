@@ -1,0 +1,41 @@
+name: Release Skills
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build .skill files
+        run: |
+          mkdir -p dist
+          for dir in skills/*/; do
+            name=$(basename "$dir")
+            case "$name" in
+              .*) continue ;;
+            esac
+            zip -r "dist/${name}.skill" "$dir"
+          done
+
+      - name: Create release tag
+        id: tag
+        run: |
+          TIMESTAMP=$(date -u +"%Y%m%dT%H%M%SZ")
+          SHORT_SHA=$(git rev-parse --short HEAD)
+          echo "tag=${TIMESTAMP}-${SHORT_SHA}" >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          name: ${{ steps.tag.outputs.tag }}
+          files: dist/*.skill
