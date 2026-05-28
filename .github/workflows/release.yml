@@ -38,4 +38,5 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release create "${{ steps.tag.outputs.tag }}" dist/*.skill \
-            --title "${{ steps.tag.outputs.tag }}"
+            --title "${{ steps.tag.outputs.tag }}" \
+            --notes ""
