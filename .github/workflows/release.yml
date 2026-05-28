@@ -18,12 +18,12 @@ jobs:
       - name: Build .skill files
         run: |
           mkdir -p dist
-          for dir in skills/*/; do
-            name=$(basename "$dir")
+          for name in skills/*/; do
+            name=$(basename "$name")
             case "$name" in
               .*) continue ;;
             esac
-            zip -r "dist/${name}.skill" "$dir"
+            (cd skills && zip -r "../dist/${name}.skill" "${name}")
           done
 
       - name: Create release tag
